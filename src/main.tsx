@@ -2,9 +2,17 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
+import { BrowserRouter, Route } from 'react-router'
+import Burger from './pages/burger.tsx'
+import { Routes } from 'react-router'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/burger" element={<Burger />} />
+      </Routes>
+    </BrowserRouter>
   </StrictMode>,
 )
