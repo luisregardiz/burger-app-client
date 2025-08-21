@@ -22,7 +22,7 @@ export default function App() {
       toast("Token no encontrado")
       return
     }
-    console.log(cedula, token)
+
     setCedula("")
     navigate("/burger")
   }
