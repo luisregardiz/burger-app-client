@@ -2,14 +2,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
-import Turnstile, { useTurnstile } from "react-turnstile"
+import Turnstile from "react-turnstile"
 
 
 import { toast, Toaster } from "sonner"
 import { useNavigate } from "react-router"
 
 export default function App() {
-  const turnstile = useTurnstile()
+
   const navigate = useNavigate()
 
   const [cedula, setCedula] = useState("")
