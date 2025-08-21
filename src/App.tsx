@@ -35,6 +35,8 @@ export default function App() {
     setToken(null);
   };
 
+  const SITE_KEY = import.meta.env.VITE_SITE_KEY
+
 
   return (
     <div className="container mx-auto">
@@ -50,7 +52,7 @@ export default function App() {
               <Input placeholder="Cedula" value={cedula} onChange={(e) => setCedula(e.target.value)} />
             </CardContent>
             <div className="px-6">
-              <Turnstile sitekey="3x00000000000000000000FF" onVerify={onVerify} onExpire={onExpire} />
+              <Turnstile sitekey={SITE_KEY} onVerify={onVerify} onExpire={onExpire} />
             </div>
             <CardFooter>
               <Button disabled={!cedula.length || cedula.length < 7 || !token}>Acceder</Button>
