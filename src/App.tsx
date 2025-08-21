@@ -35,7 +35,10 @@ export default function App() {
     setToken(null);
   };
 
-  const SITE_KEY = import.meta.env.VITE_SITE_KEY
+  const SITE_KEY =
+    process.env.NODE_ENV === "development"
+      ? import.meta.env.VITE_SITE_KEY_DEV
+      : import.meta.env.VITE_SITE_KEY
 
 
   return (
